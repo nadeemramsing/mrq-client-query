@@ -1,0 +1,25 @@
+{
+  "name": "mrq-client-query",
+  "version": "1.0.0",
+  "description": "A mongoose middleware extending the behavior of mongoose-rest-query, providing more flexibility by allowing querying to be done at client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadeemramsing/mrq-client-query.git"
+  },
+  "keywords": [
+    "mrq"
+  ],
+  "author": "Nadeem Ramsing <nadeem.ramsing@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadeemramsing/mrq-client-query/issues"
+  },
+  "homepage": "https://github.com/nadeemramsing/mrq-client-query#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

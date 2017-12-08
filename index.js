@@ -1,23 +1,27 @@
+var _ = require('lodash');
+
 module.exports = function (req, res, next) {
-    var value;
-    for (var property in req.query) {
-        value = req.query[property];
+
+    _.each(req.query, function (value, property) {
 
         if (isJSON(value)) {
-            req.query[property] = JSON.parse(value);
+            value = JSON.parse(value);
 
-            Object.defineProperty(req.query[property], 'toLowerCase', {
+            Object.defineProperty(value, 'toLowerCase', {
                 enumerable: false,
                 value: function () {
                     return this;
                 }
             });
+
+            req.query[property] = value;
         }
-    }
+    });
+
     next();
 
     function isJSON(value) {
-        if (value.indexOf && value.indexOf('{') === -1 && value.indexOf('}') === -1)
+        if ((value.indexOf && value.indexOf('{') === -1 && value.indexOf('}')) === -1)
             return false;
 
         try {
