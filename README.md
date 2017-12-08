@@ -12,8 +12,7 @@ A mongoose middleware extending the behavior of mongoose-rest-query, providing m
 **Set up**
 ```js
 var mrqClient = require('mrq-client-query'),
-    app = express = require('express')();
-
+    app = require('express')();
 
 app.use(mrqClient);
 ```
