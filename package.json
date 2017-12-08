@@ -1,6 +1,6 @@
 {
   "name": "mrq-client-query",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A mongoose middleware extending the behavior of mongoose-rest-query, providing more flexibility by allowing querying to be done at client.",
   "main": "index.js",
   "scripts": {
