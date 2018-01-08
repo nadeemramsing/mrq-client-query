@@ -37,10 +37,10 @@ mrq already allows:
 - $in
 - $nin
 
-**Limitations**
-- Query operators which uses arrays cannot be used:
+~~**Limitations**~~
+- ~~Query operators which uses arrays cannot be used~~
 
-    E.g:
+    ~~E.g:~~
 
     ```js
     var query = {
@@ -59,7 +59,7 @@ mrq already allows:
     
     ```
 
-    mongoose-rest-query converts the array into:
+    ~~mongoose-rest-query converts the array into:~~
     ```js
     { '$and': [ 
             { $or: { hasDesignations: false }, 
@@ -67,7 +67,9 @@ mrq already allows:
         ]
     }
     ```
-    ERROR: $or needs array
+    ~~ERROR: $or needs array~~
+
+    **To pass array, use JSON.stringify**
     
 
 ----------
