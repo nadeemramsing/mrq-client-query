@@ -11,7 +11,11 @@ A mongoose middleware extending the behavior of mongoose-rest-query, providing m
 
 **What it does**
 
-It converts each value in req.query to JSON.
+- **handleJSON(req, res, next)**: Converts each value in req.query to JSON.
+
+- **setModel(models)**: Set models variable to models (format: {modelName: model}) for customAPI to use.
+
+- **customAPI(req, res)**: Allow querying to be done from Client.
 
 ----------
 
@@ -20,7 +24,10 @@ It converts each value in req.query to JSON.
 var mrqClient = require('mrq-client-query'),
     app = require('express')();
 
-app.use(mrqClient);
+mrqClient.setModel(model);
+
+app.use(mrqClient.handleJSON);
+app.use('/api/custom', mrqClient.customAPI);
 ```
 
 **Use**
