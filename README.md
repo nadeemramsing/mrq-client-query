@@ -9,6 +9,12 @@ A mongoose middleware extending the behavior of mongoose-rest-query, providing m
     - Less routes
     - Less controllers
 
+**What it does**
+
+It converts each value in req.query to JSON.
+
+----------
+
 **Set up**
 ```js
 var mrqClient = require('mrq-client-query'),
