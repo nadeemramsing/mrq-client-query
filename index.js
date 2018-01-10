@@ -14,7 +14,6 @@ function handleJSON(req, res, next) {
     next();
 
     /* HELPER FUNCTIONS */
-
     function toJSON(value) {
         value = JSON.parse(value);
 
@@ -24,7 +23,6 @@ function handleJSON(req, res, next) {
                 return this;
             }
         });
-
         return value;
     }
 
@@ -97,7 +95,6 @@ function customAPI(req, res) {
 
         if (Array.isArray(populate))
             return parseArray(populate);
-
         else
             return populate || '';
     }
